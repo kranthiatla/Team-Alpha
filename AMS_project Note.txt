@@ -1,0 +1,71 @@
+ Installation steps
+ Scrum-1
+Created a floder in D (Drive ) Named as Attendence_management_system 
+Created An envrionment  Named as Myenv (python -m venv Myenv)
+Activated the Myenv (Myenv\Scripts\activate)
+
+Dependency
+
+django 
+djangorestframework
+psycopg2
+djangorestframework-simplejwt
+ 
+ 1. Directory Structure
+attendance_system/
+├── attendance_system/ # Django project settings
+│ ├── _init_.py
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
+│
+├── core/ # Main app: auth, attendance, leave, shifts, holidays
+│ ├── migrations/
+│ ├── _init_.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── models.py
+│ ├── serializers.py
+│ ├── views.py
+│ ├── urls.py
+│ └── permissions.py
+│
+├── manage.py
+├── requirements.txt
+└── README.md 
+
+pip freeze > requirements.txt
+
+2. requirements.txt
+django>=4.0
+djangorestframework>=3.13
+djangorestframework-simplejwt>=5.2.2
+Install dependencies:
+pip install -r requirements.txt
+
+
+Created the project Named as Ams_BE(django-admin startproject Ams_BE) 
+
+create the app named as Ams_app (python manage.py startapp Ams_app)
+
+Created the user in PostgreSQL named as Ams_user with password as 12345678
+Created the database in PostgreSQL named as Ams_db
+
+------------- git commands --------------
+# Initialize a new Git repository in the current directory
+git init
+
+# Stage all files in the project for commit
+git add .
+
+# Commit the staged files with an initial message
+git commit -m "Attendance management system started successfully"
+
+# Check the status to confirm everything is committed
+git status  # Should show: On branch master, nothing to commit
+
+# Create a new branch named 'dev' and switch to it
+git checkout -b dev
+
+# Push the 'dev' branch to the remote repository and set it to track the remote branch
+git push -u origin dev
